@@ -19,12 +19,14 @@
   <option value="">Select Laptop 1</option>
   <option value="hp">HP Pavilion</option>
   <option value="dell">Dell Inspiron</option>
+  <option value="asus">Asus VivoBook</option>
 </select>
 
 <select id="l2">
   <option value="">Select Laptop 2</option>
   <option value="hp">HP Pavilion</option>
   <option value="dell">Dell Inspiron</option>
+  <option value="asus">Asus VivoBook</option>
 </select>
 
 <button onclick="compare()">Compare</button>
@@ -39,7 +41,8 @@
 <script>
 const data = {
   hp: { p: "Intel i5", r: "16GB", pr: "₹65,000" },
-  dell: { p: "Ryzen 5", r: "8GB", pr: "₹58,000" }
+  dell: { p: "Ryzen 5", r: "8GB", pr: "₹58,000" },
+  asus: { p: "Intel i7", r: "16GB", pr: "₹75,000" }
 };
 
 function compare() {
