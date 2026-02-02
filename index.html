@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Laptop Comparison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial; padding: 10px; }
+    select, button { padding: 8px; margin: 5px 0; width: 100%; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background: #f2f2f2; }
+  </style>
+</head>
+<body>
+
+<h2>Compare Laptops</h2>
+
+<select id="l1">
+  <option value="">Select Laptop 1</option>
+  <option value="hp">HP Pavilion</option>
+  <option value="dell">Dell Inspiron</option>
+</select>
+
+<select id="l2">
+  <option value="">Select Laptop 2</option>
+  <option value="hp">HP Pavilion</option>
+  <option value="dell">Dell Inspiron</option>
+</select>
+
+<button onclick="compare()">Compare</button>
+
+<table>
+  <tr><th>Spec</th><th>Laptop 1</th><th>Laptop 2</th></tr>
+  <tr><td>Processor</td><td id="p1"></td><td id="p2"></td></tr>
+  <tr><td>RAM</td><td id="r1"></td><td id="r2"></td></tr>
+  <tr><td>Price</td><td id="pr1"></td><td id="pr2"></td></tr>
+</table>
+
+<script>
+const data = {
+  hp: { p: "Intel i5", r: "16GB", pr: "₹65,000" },
+  dell: { p: "Ryzen 5", r: "8GB", pr: "₹58,000" }
+};
+
+function compare() {
+  let a = data[l1.value] || {};
+  let b = data[l2.value] || {};
+  p1.innerText = a.p || "";
+  r1.innerText = a.r || "";
+  pr1.innerText = a.pr || "";
+  p2.innerText = b.p || "";
+  r2.innerText = b.r || "";
+  pr2.innerText = b.pr || "";
+}
+</script>
+
+</body>
+</html>
