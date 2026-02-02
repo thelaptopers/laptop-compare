@@ -3,7 +3,7 @@
 A simple laptop comparison website that helps users compare laptops based on specifications and features.
 
 ## 🔗 Live Website
-https://thelaptopeers.github.io/laptop-compare/
+https://thelaptopers.github.io/laptop-compare/
 
 ## 🚀 Features
 - Compare laptop specifications
